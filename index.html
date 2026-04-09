@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="shortcut icon" href="logos/as.svg" type="image/x-icon">
+  <title>Aichatou Soumaré — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <span class="nav-logo">// Portfolio</span>
+    <ul class="nav-center">
+      <li><a href="#motivation">Motivation</a></li>
+      <li><a href="#parcours">Parcours</a></li>
+      <li><a href="#competences">Compétences</a></li>
+      <li><a href="#projets">Projets</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="cv.pdf" download class="btn btn-ghost">Mon CV</a>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Changer le thème">
+        <span class="theme-icon">☽</span>
+      </button>
+      <button class="burger" onclick="toggleMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MENU MOBILE -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#motivation" onclick="toggleMenu()">Motivation</a></li>
+      <li><a href="#parcours" onclick="toggleMenu()">Parcours</a></li>
+      <li><a href="#competences" onclick="toggleMenu()">Compétences</a></li>
+      <li><a href="#projets" onclick="toggleMenu()">Projets</a></li>
+      <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+    </ul>
+    <div class="mobile-menu-bottom">
+      <a href="cv.pdf" target="_blank" class="btn btn-grad" style="width:100%;justify-content:center;">Mon CV</a>
+      <button class="mobile-theme-btn" onclick="toggleTheme()">
+        <span class="theme-icon">☽</span>
+        Changer le thème
+      </button>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-mesh"></div>
+    <div class="hero-grid"></div>
+
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-eyebrow">
+          <span class="pulse-dot"></span>
+          Disponible pour un poste
+        </div>
+        <h1 class="hero-title">
+          Développeuse<br/>
+          <span class="title-grad 3xl">Fullstack</span><br/>
+          <span class="title-dim">passionnée</span>
+        </h1>
+        <p class="hero-desc">
+          Je m'appelle <strong>Aichatou Soumaré</strong>. Titulaire d'un <strong>Bac+2 en développement web</strong>,
+          j'ai une vraie appétence pour la <strong>construction d'applications robustes</strong> — du back-end au front-end,
+          de l'architecture à la mise en production.
+          Basée à <strong>Lyon</strong>, je recherche un <strong>poste en tant que développeuse fullstack. Je suis disponible immédiatement</strong>.
+          Curieuse, rigoureuse, et convaincue qu'on apprend mieux en faisant.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-grad">Me contacter →</a>
+          <a href="#parcours" class="btn btn-ghost">Mon parcours</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="card-header">
+          <div class="dots">
+            <div class="dot dot-r"></div>
+            <div class="dot dot-y"></div>
+            <div class="dot dot-g"></div>
+          </div>
+          <span class="card-title">profil.json</span>
+        </div>
+        <div class="card-body">
+          <div class="info-row">
+            <span class="info-label">nom</span>
+            <span class="info-val">Aichatou Soumaré</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">formation</span>
+            <span class="info-val">
+              Bac+3 Développement Informatique<br/>
+              <span>Alternance · Lyon · 2026–2027</span>
+            </span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">localisation</span>
+            <span class="info-val">Lyon, Rhône (69)</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">statut</span>
+            <span class="status-chip">
+              <span class="pulse-dot"></span>
+              Open to work
+            </span>
+          </div>
+          <hr class="card-divider"/>
+          <div class="skills-chips">
+            <span class="chip chip-purple">PHP · Symfony</span>
+            <span class="chip chip-purple">TypeScript</span>
+            <span class="chip chip-pink">Angular</span>
+            <span class="chip chip-pink">SQL</span>
+            <span class="chip chip-pink">Git · Docker</span>
+            <span class="chip chip-muted">Vite.js</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider"/>
+
+  <!-- MOTIVATION -->
+  <section class="section" id="motivation">
+    <div class="section-eyebrow">// 01 — Motivation</div>
+    <h2 class="section-title">Pourquoi le développement ?</h2>
+    <p class="section-sub">Ce qui me pousse à construire, et ce que je cherche à bâtir.</p>
+
+    <div class="motiv-block">
+      <p class="motiv-text">
+        J'ai découvert le développement web comme on découvre quelque chose qui fait sens :
+        la logique, la précision, le fait que chaque ligne de code produit quelque chose de
+        <strong>concret et visible</strong>. Ce rapport direct entre ce qu'on écrit et ce qu'on crée —
+        c'est ce qui me retient.
+        <br/><br/>
+        Ce qui m'attire dans le développement fullstack, c'est justement cette <strong>vision d'ensemble</strong> :
+        comprendre comment le front dialogue avec le back, comment une API est conçue pour être robuste,
+        comment une base de données est modélisée pour tenir dans le temps. Je n'aime pas faire
+        les choses à moitié — je veux comprendre <strong>tout le chemin</strong>, de la requête à l'interface.
+        <br/><br/>
+        Je cherche une alternance où je pourrai <strong>contribuer à de vrais projets</strong>,
+        m'améliorer sur les bonnes pratiques — tests, code review, documentation — et grandir
+        aux côtés de développeurs qui ont l'envie de transmettre.
+      </p>
+    </div>
+  </section>
+
+  <hr class="divider"/>
+
+  <!-- PARCOURS -->
+  <section class="section" id="parcours">
+    <div class="section-eyebrow">// 02 — Parcours</div>
+    <h2 class="section-title">Ma progression,<br/>étape par étape</h2>
+    <p class="section-sub">
+      Du premier projet HTML au déploiement d'une API REST en production chaque étape a renforcé ma conviction que le développement, c'est vraiment là où je veux être.
+    </p>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-date">Bac+2 obtenu · 2025</div>
+        <div class="tl-heading">Titre Pro Développeur Web & Web Mobile</div>
+        <p class="tl-text">
+          Human Booster Lyon. PHP, Symfony, JavaScript, Angular, SQL, Linux, méthodes agiles.
+          C'est ici que j'ai construit mes premiers projets complets — back-end, front-end, base de données — et que j'ai compris ce que ça veut dire de livrer quelque chose qui fonctionne vraiment.
+        </p>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot pink"></div>
+        <div class="tl-date">Stage · Juillet–Septembre 2025</div>
+        <div class="tl-heading">Stage Développeur Fullstack — Lipouta, Paris</div>
+        <p class="tl-text">
+          Première expérience sur des projets en production : développement et maintenance de fonctionnalités web, travail sur des bases SQL réelles, participation aux revues de code, rédaction de documentation technique. La confirmation que j'aime le rythme d'une équipe qui construit.
+        </p>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-date">Prochain objectif · Septembre 2026</div>
+        <div class="tl-heading">Poste Développeur Fullstack</div>
+        <p class="tl-text">
+          Je cible des postes en développement d'applications web — maintenance, évolution de produits SaaS, développement de fonctionnalités. Des environnements où la qualité du code compte, où on fait des revues, et où on peut progresser vite en étant entouré de bons développeurs.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider"/>
+
+  <!-- COMPÉTENCES -->
+  <section class="section" id="competences">
+    <div class="section-eyebrow">// 03 — Compétences</div>
+    <h2 class="section-title">Ce que j'apporte<br/>dès le premier jour</h2>
+    <p class="section-sub">
+      Un an de formation intensive, un stage en conditions réelles, et des projets personnels construits de A à Z — voilà ce que je mets dans la balance.
+    </p>
+
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="sk-icon">⚙️</div>
+        <div class="sk-name">Back-end & API</div>
+        <p class="sk-desc">PHP, Symfony, API Platform. Conception d'API REST, gestion des entités, authentification JWT. J'aime la rigueur que ça demande — chaque endpoint doit être pensé.</p>
+        <span class="sk-badge badge-v">Acquis</span>
+      </div>
+
+      <div class="skill-card">
+        <div class="sk-icon">🎨</div>
+        <div class="sk-name">Front-end</div>
+        <p class="sk-desc">TypeScript, Angular, Vite.js, Tailwind CSS. Je construis des interfaces qui consomment mes propres API — la boucle complète du fullstack, de bout en bout.</p>
+        <span class="sk-badge badge-v">Acquis</span>
+      </div>
+
+      <div class="skill-card">
+        <div class="sk-icon">🗄️</div>
+        <div class="sk-name">Bases de données</div>
+        <p class="sk-desc">SQL, MySQL, PostgreSQL. Modélisation relationnelle, requêtes complexes, structuration et contrôle qualité des données. Un domaine où la rigueur fait toute la différence.</p>
+        <span class="sk-badge badge-v">Acquis</span>
+      </div>
+
+      <div class="skill-card">
+        <div class="sk-icon">🔧</div>
+        <div class="sk-name">Outils & environnement</div>
+        <p class="sk-desc">Git, Docker, Linux, GitHub, Jira. À l'aise dans un environnement de développement professionnel, versioning compris.</p>
+        <span class="sk-badge badge-v">Acquis</span>
+      </div>
+
+      <div class="skill-card">
+        <div class="sk-icon">📋</div>
+        <div class="sk-name">Qualité & méthodes</div>
+        <p class="sk-desc">Documentation technique, code review, méthodes agiles. Habituée à écrire du code lisible, à expliquer mes choix et à m'améliorer grâce aux retours.</p>
+        <span class="sk-badge badge-p">En progression</span>
+      </div>
+
+      <div class="skill-card">
+        <div class="sk-icon">🔍</div>
+        <div class="sk-name">Curiosité & autonomie</div>
+        <p class="sk-desc">J'apprends vite, seule ou en équipe. Je lis la doc, je teste, je documente. La résolution de problèmes techniques est ce que je préfère dans ce métier.</p>
+        <span class="sk-badge badge-v">Acquis</span>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider"/>
+
+  <!-- OUTILS -->
+  <section class="section">
+    <div class="section-eyebrow">// 04 — Outils</div>
+    <h2 class="section-title">Stack technique</h2>
+    <p class="section-sub">Les outils que j'utilise au quotidien, et ceux que je continue d'apprendre.</p>
+
+    <div class="tools-wrap">
+      <div class="tool-pill pill-mastered"><span class="pip pip-mastered"></span>PHP / Symfony</div>
+      <div class="tool-pill pill-mastered"><span class="pip pip-mastered"></span>TypeScript / JavaScript</div>
+      <div class="tool-pill pill-mastered"><span class="pip pip-mastered"></span>Angular</div>
+      <div class="tool-pill pill-mastered"><span class="pip pip-mastered"></span>HTML / CSS / TailwindCSS</div>
+      <div class="tool-pill pill-mastered"><span class="pip pip-mastered"></span>SQL / MySQL</div>
+      <div class="tool-pill pill-mastered"><span class="pip pip-mastered"></span>Figma</div>
+      <div class="tool-pill pill-mastered"><span class="pip pip-mastered"></span>Git / GitHub</div>
+      <div class="tool-pill pill-learning"><span class="pip pip-on"></span>PostgreSQL</div>
+      <div class="tool-pill pill-learning"><span class="pip pip-on"></span>Docker</div>
+      <div class="tool-pill pill-learning"><span class="pip pip-on"></span>React</div>
+      <div class="tool-pill pill-learning"><span class="pip pip-on"></span>Python</div>
+      <div class="tool-pill pill-learning"><span class="pip pip-on"></span>Linux / Bash</div>
+      <div class="tool-pill pill-planned"><span class="pip pip-off"></span>Kubernetes</div>
+      <div class="tool-pill pill-planned"><span class="pip pip-off"></span>CI/CD (GitLab)</div>
+    </div>
+
+    <div class="tools-legend">
+      <span style="color:#34d399">● Maîtrisé</span>
+      <span style="color:var(--accent)">● En apprentissage</span>
+      <span>● Planifié</span>
+    </div>
+  </section>
+
+  <hr class="divider"/>
+
+  <!-- PROJETS -->
+  <section class="section" id="projets">
+    <div class="section-eyebrow">// 05 — Projets</div>
+    <h2 class="section-title">Ce que j'ai construit<br/>concrètement</h2>
+    <p class="section-sub">
+      Des projets de formation, des expérimentations personnelles, et des envies de suite. Les règles : rien n'est fini tant que ça ne tourne pas et chaque projet est une opportunité d'apprendre et de s'améliorer.
+    </p>
+
+    <div class="projects-grid">
+
+      <div class="project-card skill-card">
+        <div class="project-header">
+          <div class="project-icon">🏡</div>
+          <div class="project-links">
+            <a href="https://github.com/agathism/CoNexus_Api_Platform" class="project-link" target="_blank">GitHub →</a>
+          </div>
+        </div>
+        <div class="project-name">CoNexus</div>
+        <p class="project-desc">
+          Plateforme web de location et d'achat immobilier. API REST Symfony consommée par une application Angular, système d'authentification JWT, messagerie entre utilisateurs et propriétaires, tests d'intégration.
+        </p>
+        <div class="project-tags">
+          <span class="chip chip-green">Fullstack</span>
+          <span class="chip chip-purple">Symfony</span>
+          <span class="chip chip-purple">Angular</span>
+          <span class="chip chip-purple">TailwindCSS</span>
+          <span class="chip chip-pink">API REST</span>
+          <span class="chip chip-muted">2025</span>
+        </div>
+      </div>
+
+      <div class="project-card skill-card">
+        <div class="project-header">
+          <div class="project-icon">🎮</div>
+          <div class="project-links">
+            <a href="https://github.com/agathism/OverHub" class="project-link" target="_blank">GitHub →</a>
+          </div>
+        </div>
+        <div class="project-name">OverHub</div>
+        <p class="project-desc">
+          Plateforme communautaire dédiée à l'univers d'Overwatch. Présentation des héros, base de données relationnelle, back-end Symfony complet. Un projet où j'ai pris autant de plaisir à modéliser la BDD qu'à finir le front.
+        </p>
+        <div class="project-tags">
+          <span class="chip chip-green">Fullstack</span>
+          <span class="chip chip-purple">Symfony</span>
+          <span class="chip chip-purple">SQL</span>
+          <span class="chip chip-purple">TailwindCSS</span>
+          <span class="chip chip-pink">Base de données</span>
+          <span class="chip chip-muted">2025</span>
+        </div>
+      </div>
+
+      <div class="project-card skill-card">
+        <div class="project-header">
+          <div class="project-icon">🚀</div>
+          <div class="project-links">
+            <a href="https://github.com/agathism/OmniSpace" class="project-link" target="_blank">GitHub →</a>
+          </div>
+        </div>
+        <div class="project-name">OmniSpace</div>
+        <p class="project-desc">
+          Application front-end consommant l'API NASA. Interface de visualisation de données spatiales construite avec Vite.js et Tailwind CSS. Un terrain de jeu pour explorer la consommation d'API et le rendu dynamique de données.
+        </p>
+        <div class="project-tags">
+          <span class="chip chip-green">Front-end</span>
+          <span class="chip chip-purple">ViteJS</span>
+          <span class="chip chip-purple">TailwindCSS</span>
+          <span class="chip chip-pink">API NASA</span>
+          <span class="chip chip-muted">2025</span>
+        </div>
+      </div>
+
+      <div class="project-card skill-card">
+        <div class="project-header">
+          <div class="project-icon">𝐆</div>
+          <div class="project-links">
+            <a href="https://github.com/agathism/Google-Cybersecurity-Portfolio" class="project-link" target="_blank">GitHub →</a>
+          </div>
+        </div>
+        <div class="project-name">Google Cybersecurity Portfolio</div>
+        <p class="project-desc">
+          Exercices pratiques issus du Google Cybersecurity Certificate : analyse de logs, sécurité réseau, scripting Python. Une curiosité sur comment les apps qu'on construit peuvent être attaquées — et mieux défendues.
+        </p>
+        <div class="project-tags">
+          <span class="chip chip-green">Certif</span>
+          <span class="chip chip-purple">Python</span>
+          <span class="chip chip-purple">Linux</span>
+          <span class="chip chip-pink">Analyse de logs</span>
+          <span class="chip chip-muted">2026</span>
+        </div>
+      </div>
+
+      <div class="project-card skill-card">
+        <div class="project-header">
+          <div class="project-icon">𝐆</div>
+          <div class="project-links">
+            <a href="https://github.com/agathism/Google-IT-Support" class="project-link" target="_blank">GitHub →</a>
+          </div>
+        </div>
+        <div class="project-name">Google IT Support</div>
+        <p class="project-desc">
+          Projets et exercices du Google IT Support Certificate : support technique, dépannage système, gestion de réseaux. Une base solide pour comprendre l'infrastructure sur laquelle tourne le code qu'on déploie.
+        </p>
+        <div class="project-tags">
+          <span class="chip chip-green">Certif</span>
+          <span class="chip chip-purple">Linux</span>
+          <span class="chip chip-purple">Windows</span>
+          <span class="chip chip-pink">Support technique</span>
+          <span class="chip chip-muted">2026</span>
+        </div>
+      </div>
+
+      <div class="project-card skill-card">
+        <div class="project-header">
+          <div class="project-icon">🤖</div>
+          <div class="project-links">
+            <a href="https://github.com/agathism" class="project-link" target="_blank">GitHub →</a>
+          </div>
+        </div>
+        <div class="project-name">Assistant IA (en cours)</div>
+        <p class="project-desc">
+          Application locale de recherche d'emploi assistée par IA — interface HTML, API Anthropic, génération de lettres de motivation et d'analyses d'offres. Un projet qui me sert autant que je le construis.
+        </p>
+        <div class="project-tags">
+          <span class="chip chip-green">En cours</span>
+          <span class="chip chip-purple">JavaScript</span>
+          <span class="chip chip-purple">API Anthropic</span>
+          <span class="chip chip-pink">LLM</span>
+          <span class="chip chip-muted">2026</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="divider"/>
+
+  <!-- CONTACT -->
+  <div class="contact-wrap" id="contact">
+    <div class="contact-glow"></div>
+    <div class="section-eyebrow">// 06 — Contact</div>
+    <h2 class="contact-title">On travaille ensemble ?</h2>
+    <p class="contact-sub">Je suis disponible pour une alternance en développement fullstack à partir de septembre 2026, sur Lyon.</p>
+    <div class="contact-links">
+      <a href="mailto:aicha.smr1@gmail.com" class="btn btn-grad">✉ Me contacter</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <hgroup>
+      <p>Aichatou Soumaré</p>
+      <p>Lyon, Rhône · <span class="grad-text">Open to work</span></p>
+      <p class="grad-text">&copy; 2026 - Tous droits réservés</p>
+    </hgroup>
+    <div class="footer-logo">
+      <a href="https://www.linkedin.com/in/a%C3%AFchatou-soumar%C3%A9-5514311b3/" target="_blank" class="btn btn-ghost"><img src="logos/linkedin.svg" alt="LinkedIn"/></a>
+      <a href="https://github.com/agathism" target="_blank" class="btn btn-ghost"><img src="logos/github.svg" alt="GitHub" /></a>
+      <!-- <a href="https://www.hackthebox.com" target="_blank" class="btn btn-ghost"><img src="logos/hackthebox.svg" alt="Hack The Box"/></a> -->
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
